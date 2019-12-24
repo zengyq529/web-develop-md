@@ -1,4 +1,4 @@
-# cookie读写 
+# cookie读写 (提高效率 能copy的坚决不写)
 
 
 
@@ -6,7 +6,7 @@
 
 name: cookie名称
 
-value: cookie值 
+value: cookie值
 
 domain: 即可访问此cookie的域名(不同级有不同限制)
 
@@ -35,7 +35,7 @@ yarn add js-cookie --save
 ```js
 import Cookies from 'js-cookie'
 
-Cookies.set('name', 'value', { path: '',expires: 7 ,domain: '.domain.com' }); 
+Cookies.set('name', 'value', { path: '',expires: 7 ,domain: '.domain.com' });
 //expires : day
 Cookies.get('name',{{ domain: 'domain.com' }}); // => 'value'
 Cookies.remove('name', { path: '',domain: '.domain.com' });
@@ -147,7 +147,7 @@ function removeCookie(name, param) {
 
 #### setCookie
 
-https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.setStorageSync.html 
+https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.setStorageSync.html
 
 ```js
 //value: 需要存储的内容。只支持原生类型、Date、及能够通过`JSON.stringify`序列化的对象。
@@ -179,9 +179,9 @@ wx.setStorageSync('name','');
 https://www.npmjs.com/package/react-native-cookie
 
 ```shell
-# install library from npm 
+# install library from npm
 npm install react-native-cookie --save
-# link native code 
+# link native code
 react-native link react-native-cookie
 
 ```
@@ -191,7 +191,7 @@ import Cookie from 'react-native-cookie';
 
 // set cookie 'foo=bar' for 'http://bing.com/'
 Cookie.set('http://bing.com/', 'foo', 'bar').then(() => console.log('success'));
- 
+
 // set cookie 'foo=bar' for 'http://bing.com/' with options:
 Cookie.set('http://bing.com/', 'foo', 'bar', {
     path: 'ditu',
@@ -200,14 +200,6 @@ Cookie.set('http://bing.com/', 'foo', 'bar', {
 
 ```
 
- 
-
-#### setCookie
 
 
-
-#### getCookie
-
-
-
-#### clearCookie
+#### 
